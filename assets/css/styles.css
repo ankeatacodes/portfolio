@@ -604,5 +604,22 @@ img {
 .work__img img:hover {
   transform: scale(1.1); /* Optional: Add a hover effect for increased size */
 }
+/* For WebKit (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 12px; /* Set the width of the scrollbar */
+}
 
+::-webkit-scrollbar-thumb {
+  background-color: rgb(241, 111, 232); /* Set the color of the thumb */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #3b3636; /* Set the color of the track */
+}
+
+/* For Firefox */
+/* Note: The scrollbar-color property is not supported in Safari */
+html {
+  scrollbar-color: rgb(241, 111, 232) #3b3636; /* Set the color of the thumb and the track */
+}
 
