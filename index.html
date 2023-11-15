@@ -18,13 +18,16 @@
 
 
         <title>Ankita's Portfolio</title>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+        <script src="path/to/gsap.min.js"></script>
     </head>
     <body>
         <!--===== HEADER =====-->
         <header class="l-header">
             <nav class="nav bd-grid">
                 <div>
-                    <a href="#" class="nav__logo">TECH PORTFOLIO</a>
+                    <a href="#" class="nav__logo"><h3>LOOK WHO'S HERE!!</h3></a>
                 </div>
 
                 <div class="nav__menu" id="nav-menu">
@@ -47,15 +50,19 @@
             <!--===== HOME =====-->
             <section class="home bd-grid" id="home">
                 <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I'm <span class="home__title-color">Ankita</span><br> Web Developer</h1>
+                    <h1 class="home__title">Hi,<br>I'm <span class="home__title-color">Ankita</span><br></h1>
+                    <div class="web_developer">
+                        <h2 id="webDeveloperTitle">Loading...</h2>
+                      </div>
+                      
 
                     <a href="#" class="button">Contact</a>
                 </div>
 
                 <div class="home__social">
-                    <a href="https://www.linkedin.com/in/ankita-ghosh-92673126b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                    <a href="" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
                     <a href="" class="home__social-icon"><i class='bx bxl-behance' ></i></a>
-                    <a href="https://github.com/ankeatacodes" class="home__social-icon"><i class='bx bxl-github' ></i></a>
+                    <a href="" class="home__social-icon"><i class='bx bxl-github' ></i></a>
                 </div>
 
                 <div class="home__img">
@@ -82,7 +89,7 @@
                     
                     <div>
                         <h2 class="about__subtitle">I'm Ankita</h2>
-                        <p class="about__text">I'm Ankita, a dedicated web developer who transforms ideas into captivating online experiences. With expertise in front-end and back-end technologies, I craft seamless websites, blending innovation and functionality. Passionate about elegant code and user-centric design, I bring digital visions to life with a commitment to excellence.</p>           
+                        <p class="about__text" id="typing-text"></p>           
                     </div>                                   
                 </div>
             </section>
@@ -93,8 +100,11 @@
 
                 <div class="skills__container bd-grid">          
                     <div>
-                        <h2 class="skills__subtitle">Profesional Skills</h2>
-                        <p class="skills__text"> I showcase my expertise in HTML5, CSS3, and JavaScript, emphasizing proficiency in crafting visually appealing and responsive web designs. Additionally, I possess strong skills in UX/UI design, contributing to seamless and user-centric digital experiences.</p>
+                        <div>
+                            <h2 class="skills__subtitle">Professional Skills</h2>
+                            <p class="skills__text" id="skillsText">Loading...</p>
+                          </div>
+                          
                         <div class="skills__data">
                             <div class="skills__names">
                                 <i class='bx bxl-html5 skills__icon'></i>
@@ -209,5 +219,10 @@
 
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
+        <!-- GSAP Animation Library -->
+        <script src="path/to/gsap.min.js"></script>
+<!-- ScrollTrigger Plugin -->
+        <script src="path/to/ScrollTrigger.min.js"></script>
+
     </body>
 </html>
