@@ -1,4 +1,35 @@
-// Define the text content you want to display with typing animation
+// Function to add cards to the About section
+function addAboutCards(cardsData) {
+    const aboutCardsContainer = document.getElementById('aboutCardsContainer');
+  
+    // Clear existing content
+    aboutCardsContainer.innerHTML = '';
+  
+    // Iterate through the cardsData and create HTML for each card
+    cardsData.forEach((card) => {
+      const cardElement = document.createElement('div');
+      cardElement.classList.add('about__card'); // Adjust the class name as needed
+  
+      cardElement.innerHTML = `
+        <div class="about__card-title">${card.title}</div>
+        <div class="about__card-description">${card.description}</div>
+      `;
+  
+      // Append the card to the container
+      aboutCardsContainer.appendChild(cardElement);
+    });
+  }
+  
+  // Example data for the cards (replace with your own data)
+  const aboutCardsData = [
+    { title: '10+2', description: 'South Point High School' },
+    { title: 'B.TECH', description: 'Meghnad Saha Institute of technolgy' },
+    // Add more cards as needed
+  ];
+  
+  // Call the function to add cards with the provided data
+  addAboutCards(aboutCardsData);
+  // Define the text content you want to display with typing animation
 const webDeveloperTitleContent = "Web Developer";
 
 // Get the web developer title element
@@ -41,7 +72,7 @@ function typeWriter(text, targetElement, speed) {
 }
 
 // Typing animation for the about section
-const aboutText = "I'm Ankita, a dedicated web developer who transforms ideas into captivating online experiences. With expertise in front-end and back-end technologies, I craft seamless websites, blending innovation and functionality. Passionate about elegant code and user-centric design, I bring digital visions to life with a commitment to excellence.";
+const aboutText = "I'm Ankita, a dedicated web developer who transforms ideas into captivating online experiences. With expertise in front-end and back-end technologies, I craft seamless websites, blending innovation and functionality.";
 
 typeWriter(aboutText, 'typing-text', 50);
 // Define the text content you want to display with typing animation
