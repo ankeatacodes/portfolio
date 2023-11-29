@@ -9,7 +9,7 @@
   /* HSL color mode */
   --hue-color: 224;
   --first-color:  #3b3636;
-  --second-color: rgb(241, 111, 232);
+  --second-color: rgb(220, 40, 0);
   /*===== Fuente y tipografia =====*/
   --body-font: 'Poppins', sans-serif;
   --big-font-size: 2rem;
@@ -202,11 +202,11 @@ img {
 
 .home__title {
   font-size: var(--big-font-size);
-  margin-bottom: var(--mb-5);
+  margin-bottom: var(--mb-2);
 }
 
 .home__title-color {
-  color: var(--first-color);
+  color: #fff;
 }
 
 .home__social {
@@ -217,7 +217,7 @@ img {
 .home__social-icon {
   width: max-content;
   margin-bottom: var(--mb-2);
-  font-size: 1.5rem;
+  font-size: 4.0rem;
   color: var(--second-color);
 }
 
@@ -250,23 +250,33 @@ img {
   font-weight: var(--font-semi);
   border-radius: .5rem;
   transition: .3s;
+  margin-top: 20px;
+  margin-left: 5px;
 }
 
 .button:hover {
   box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15);
   background-color: #e8e8e8;
-  color: rgb(241, 111, 232);
+  color:  rgb(220, 40, 0);
   
 }
 
 /* ===== ABOUT =====*/
+.about#about {
+  /* Add your CSS property and value */
+  padding: 5px; /* Adjust the value as needed */
+}
+/* Update the CSS for the About section with the card styles and adjusted margins */
+.about__container.bd-grid{
+  margin-top: 0%;
+  padding-right: 20px;
+  
+}
 .about__container {
   row-gap: 2rem;
   text-align: center;
-}
+  margin-top: 1rem; /* Adjusted margin-top for better spacing */
 
-.about__subtitle {
-  margin-bottom: var(--mb-2);
 }
 
 .about__img {
@@ -274,9 +284,87 @@ img {
 }
 
 .about__img img {
-  width: 200px;
+  height: 250px;
+  width: 450px;
+  border-radius: .5rem;
+  margin-top: 10px;
+  margin-right: 20px;
+ 
+}
+.about__container {
+  row-gap: 2rem;
+  text-align: center;
+  margin-top: 1rem; /* Adjusted margin-top for better spacing */
+}
+
+.about__img {
+  justify-self: flex-start; /* Use flex-start to shift the image to the left */
+  margin-top: 10px;
+  margin-left: 10px; /* Adjusted margin-left for better spacing */
+}
+
+.about__img img {
+  height: 250px;
+  width: 450px;
   border-radius: .5rem;
 }
+
+/* Card styles for the About section */
+.about__card {
+  background-color: #000000;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  border: 2px solid rgb(220, 40, 0); /* Add border styling */
+}
+.about__card {
+  position: relative;
+  background-color: #000000;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  border: 2px solid  rgb(220, 40, 0);
+  overflow: hidden;
+  z-index: 1; /* Set a higher z-index for the card content */
+}
+
+.about__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  transition: width 0.3s ease;
+  z-index: -1; /* Set a lower z-index for the pseudo-element */
+}
+
+.about__card:hover::before {
+  width: 100%;
+}
+
+.about__card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.about__card-description {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Adjusted margin-bottom for better spacing */
+.about__text {
+  margin-bottom: 10px;
+}
+.about__subtitle {
+  margin-bottom: 2px;
+}
+
 
 /* ===== SKILLS =====*/
 .skills__container {
@@ -391,6 +479,171 @@ img {
   cursor: pointer;
   margin-left: auto;
 }
+/* Additional styles for the contact cards */
+.contact__card {
+  background-color: #000000;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  border: 2px solid  rgb(220, 40, 0); /* Add border styling */
+}
+.contact__card {
+  position: relative;
+  background-color: #000000;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 2px solid  rgb(220, 40, 0);
+  overflow: hidden;
+  z-index: 1; /* Set a higher z-index for the card content */
+  display: flex;
+  flex-direction: column;
+}
+.contact__card-container{
+  display: flex;
+  flex-direction: column;
+  margin-right: var(--mb-5);
+  margin-top: var(--mb-5); 
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.contact__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  transition: width 0.3s ease;
+  z-index: -1; /* Set a lower z-index for the pseudo-element */
+}
+
+.contact__card:hover::before {
+  width: 100%;
+}
+
+.contact__card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.contact__card-description {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Update the margin-top for .contact__container to reduce the gap */
+.contact__container {
+  margin-top: 1rem; /* Adjust the value as needed */
+}
+
+/* Optionally, you can reduce the margin-bottom for .section-title in the contact section */
+.contact .section-title {
+  margin-bottom: var(--mb-2); /* Adjust the value as needed */
+}
+.contact__container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+/* Additional styles for the contact cards */
+.contact__card {
+  background-color: #000000;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  border: 2px solid rgb(220, 40, 0); /* Add border styling */
+}
+
+/* Styles for the contact form */
+.contact__form {
+  width: 100%;
+  max-width: 400px; /* Adjust the maximum width as needed */
+  margin-right: 20px; /* Add a margin to create a gap between the form and cards */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .contact__form {
+    max-width: 100%; /* Adjust the width for smaller screens */
+    margin-right: 0; /* Remove margin for smaller screens */
+  }
+
+  .contact__container {
+    flex-direction: column; /* Stack items in a column for smaller screens */
+  }
+}
+/* Additional styles for the contact cards */
+.contact__card {
+  position: relative;
+  background-color: #000000;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 2px solid rgb(220, 40, 0);
+  overflow: hidden;
+  z-index: 1; /* Set a higher z-index for the card content */
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__card-container {
+  display: flex;
+  flex-direction: column;
+  margin-right: var(--mb-5);
+  margin-top: var(--mb-5);
+}
+
+.contact__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  transition: width 0.3s ease;
+  z-index: -1; /* Set a lower z-index for the pseudo-element */
+}
+
+.contact__card:hover::before {
+  width: 100%;
+}
+
+.contact__card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.contact__card-description {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Update the margin-top for .contact__container to reduce the gap */
+.contact__container {
+  margin-top: 1rem; /* Adjust the value as needed */
+}
+
+/* Optionally, you can reduce the margin-bottom for .section-title in the contact section */
+.contact .section-title {
+  margin-bottom: var(--mb-2); /* Adjust the value as needed */
+}
+.contact__container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
 
 /* ===== FOOTER =====*/
 .footer {
@@ -413,6 +666,12 @@ img {
 .footer__icon {
   font-size: 1.5rem;
   color: rgb(73, 69, 69)909;
+  margin: 0 var(--mb-2);
+}
+/* Update the CSS for the footer icons to set the color to white */
+.footer__icon {
+  font-size: 1.5rem;
+  color: #fff; /* Set the color to white */
   margin: 0 var(--mb-2);
 }
 
@@ -466,6 +725,7 @@ img {
   .contact__form {
     width: 360px;
     padding-top: 2rem;
+    margin-right: 20px;
     
   }
   .contact__container {
@@ -520,7 +780,7 @@ img {
   
   .nav__link:hover {
     font-size: 1.2em; 
-    color: purple;
+    color:rgb(236, 144, 15);
   }
   
   .home {
@@ -581,7 +841,7 @@ img {
 }
 
 .home__blob:hover {
-  fill:rgb(212, 153, 208)
+  fill:rgb(236, 144, 15)
 
 }; 
 .home__data {
@@ -611,7 +871,7 @@ img {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(241, 111, 232); /* Set the color of the thumb */
+  background-color:  rgb(220, 40, 0); /* Set the color of the thumb */
 }
 
 ::-webkit-scrollbar-track {
@@ -621,7 +881,7 @@ img {
 /* For Firefox */
 /* Note: The scrollbar-color property is not supported in Safari */
 html {
-  scrollbar-color: rgb(241, 111, 232) #3b3636; /* Set the color of the thumb and the track */
+  scrollbar-color: (241,rgb 111, 232) #3b3636; /* Set the color of the thumb and the track */
 }
 .home__title-container {
   white-space: pre-line;
